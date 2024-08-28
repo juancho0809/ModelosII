@@ -8,10 +8,10 @@ class Imusician(ABC):
         pass
 
 class Musician(Imusician):
-    def __init__(self,name: str, instrument: Instrument) -> None:
+    def __init__(self,name: str) -> None:
 
         self.name = name
-        self.instrument = instrument
+        self.instrument = None
 
     def play(self):
         print(f"{self.name} playing the instrument ...")

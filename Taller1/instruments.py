@@ -7,7 +7,7 @@ class Instrument(ABC):
         pass
 
     @abstractmethod    
-    def sound():
+    def sound(self):
         pass
 # The following classes are the concrete implementations of the abstract class Instrument
 #1
@@ -19,7 +19,7 @@ class Guitar(Instrument):
     def test(self):
         print("Testing Guitar...")
 
-    def sound():
+    def sound(self):
         print("**Guitar sound**")
 #2
 class Piano(Instrument):
@@ -30,7 +30,7 @@ class Piano(Instrument):
     def test(self):
         print("Testing Piano...")
     
-    def sound():
+    def sound(self):
         print("**Piano sound**")
 #3
 class Bass(Instrument):
@@ -41,7 +41,7 @@ class Bass(Instrument):
     def test(self):
         print("Testing Bass...")
 
-    def sound():
+    def sound(self):
         print("**Bass sound**")    
 #4
 class Drums(Instrument):
@@ -51,7 +51,7 @@ class Drums(Instrument):
     def test(self):
         print("Testing Drums...")
     
-    def sound():
+    def sound(self):
         print("**Drums sound**")
 #5
 class Violin(Instrument):
@@ -62,7 +62,7 @@ class Violin(Instrument):
     def test(self):
         print("Testing Violin...")
 
-    def sound():
+    def sound(self):
         print("**Violin sound**")
 #6        
 class Trumpet(Instrument):
@@ -73,7 +73,7 @@ class Trumpet(Instrument):
     def test(self):
         print("Testing Trumpet...")
     
-    def sound():
+    def sound(self):
         print("**Trumpet sound**")
 
 #7
@@ -85,7 +85,7 @@ class Saxophone(Instrument):
     def test(self):
         print("Testing Saxophone...")
 
-    def sound():
+    def sound(self):
         print("**Saxophone sound**")
 
 #8
@@ -97,7 +97,7 @@ class Flute(Instrument):
     def test(self):
         print("Testing Flute...")
 
-    def sound():
+    def sound(self):
         print("**Flute sound**")
 
 #9
@@ -109,7 +109,7 @@ class Harmonica(Instrument):
     def test(self):
         print("Testing Harmonica...")
 
-    def sound():
+    def sound(self):
         print("**Harmonica sound**")
 
 #10
@@ -121,5 +121,5 @@ class Voice(Instrument):
     def test(self):
         print("Do Re Mi Fa Sol La Si...")
 
-    def sound():
+    def sound(self):
         print("**Singig**")
