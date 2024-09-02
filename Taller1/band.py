@@ -9,7 +9,7 @@ class Band():
         self.musicians = musicians
         self.instruments = instruments
 
-    def asignarInstrumentos(self):
+    def assignInstruments(self):
         randNumber = random.randint(1,10)
         counter = 0
         for musician in self.musicians:
@@ -19,7 +19,7 @@ class Band():
             randInstrument = random.randint(-1, len(self.instruments) -1)
             musician.instrument = self.instruments[randInstrument]
 
-    def tocar(self, tiempo: int):
+    def play(self, tiempo: int):
 
         for musician in self.musicians:
             if musician.instrument:
@@ -32,6 +32,6 @@ class Band():
         while time.time() - inicio < tiempo:
             for musician in self.musicians:
                 if musician.instrument:
-                    musician.instrument.sound()
+                    musician.play()
             print("-----------------------------------")
             time.sleep(5)
