@@ -8,6 +8,9 @@ class MusicianBase(ABC):
         pass
 
 class Musician(MusicianBase):
+    """
+    Create the musician with the name
+    """
     def __init__(self,name: str) -> None:
 
         self.name = name
