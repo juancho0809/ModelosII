@@ -11,12 +11,12 @@ class Band():
 
     def assignInstruments(self):
         randNumber = random.randint(1,10) # Random size 1-10 for sublist
-        print(randNumber)
+
 
         randomMusicians = random.sample(self.musicians , randNumber) # Random sublist of musicians
         for musician in randomMusicians:
             randInstrument = random.randint(0, len(self.instruments) -1)
-            print(randInstrument)
+
             musician.instrument = self.instruments[randInstrument]
 
     def play(self, tiempo: int):
