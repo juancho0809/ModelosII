@@ -10,26 +10,26 @@ class Band():
         self.instruments = instruments
 
     def assignInstruments(self):
-        randNumber = random.randint(1,10)
-        counter = 0
-        for musician in self.musicians:
-            counter += 1
-            if counter > randNumber:
-                break
-            randInstrument = random.randint(-1, len(self.instruments) -1)
+        randNumber = random.randint(1,10) # Random size 1-10 for sublist
+        print(randNumber)
+
+        randomMusicians = random.sample(self.musicians , randNumber) # Random sublist of musicians
+        for musician in randomMusicians:
+            randInstrument = random.randint(0, len(self.instruments) -1)
+            print(randInstrument)
             musician.instrument = self.instruments[randInstrument]
 
     def play(self, tiempo: int):
 
         for musician in self.musicians:
-            if musician.instrument:
+            if musician.instrument: # Take only the musicians who have instrument
                 musician.instrument.test()
         print("-----------------------------------")
         print("La banda se presentará en 5 segundos...")
         time.sleep(5)
-        inicio = time.time()
+        start = time.time()
         
-        while time.time() - inicio < tiempo:
+        while time.time() - start < tiempo:
             for musician in self.musicians:
                 if musician.instrument:
                     musician.play()
