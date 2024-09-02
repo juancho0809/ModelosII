@@ -1,0 +1,58 @@
+@startuml banda
+
+Instrument <|-- Guitar
+Instrument <|-- Piano
+Instrument <|-- Bass
+
+MusicianBase <|-- Musician
+
+Musician o-- Instrument
+
+Band o-- MusicianBase
+Band o-- Instrument
+
+abstract class Instrument {
+    {abstract} test()
+    {abstract} sound()
+}
+
+class Guitar {
+    test()
+    sound()
+}
+
+class Piano {
+    test()
+    sound()
+}
+
+class Bass {
+    test()
+    sound()
+}
+
+class Band {
+
+}
+
+abstract class Instrument {
+    {abstract} test()
+    {abstract} sound()
+}
+
+abstract class MusicianBase {
+    {abstract} play()
+}
+
+class Musician{
+    name: str
+    instrument: Instrument
+    play()
+}
+
+class Band{
+    musicians: List[Musician]
+    instruments: List[instrument]
+    assignInstruments()
+    play()
+}

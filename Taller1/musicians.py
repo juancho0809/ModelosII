@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 from instruments import Instrument
 
-class Imusician(ABC):
+class MusicianBase(ABC):
 
     @abstractmethod
     def play(self):
         pass
 
-class Musician(Imusician):
+class Musician(MusicianBase):
     def __init__(self,name: str) -> None:
 
         self.name = name
