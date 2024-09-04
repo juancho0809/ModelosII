@@ -11,11 +11,6 @@ Musician o-- Instrument
 Band o-- MusicianBase
 Band o-- Instrument
 
-abstract class Instrument {
-    {abstract} test()
-    {abstract} sound()
-}
-
 class Guitar {
     test()
     sound()
