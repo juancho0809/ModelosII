@@ -1,5 +1,9 @@
 # Music Band Workshop
 
+Code created by:
+- Cesar Pulido 20222020048
+- Juan Diego Lozada 20222020014
+
 This is a workshop about create a software implementation of music band
 
 ## Requirements
