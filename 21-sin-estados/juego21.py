@@ -5,6 +5,23 @@ def generar_mazo():
     return [(valor, palo) for valor, _ in [(str(v), v) for v in range(2, 11)] + [('A', 11), ('J', 10), ('Q', 10), ('K', 10)]
 	for palo in ['Corazones', 'Diamantes', 'Tréboles', 'Picas']]
 
+def repartir_cartas(mazo, mano_jugador, mano_casa):
+
+    random.shuffle(mazo)
+    for _ in range(2):
+        # Repartimos a la mano 1
+        if mazo:  # Comprobar si quedan cartas en el mazo
+
+            mano_jugador.append(mazo.pop(random.randint(0, len(mazo) - 1)))  # Retorna una carta a la baraja jugador
+        
+        # Repartimos a la mano 2
+        if mazo:  # Comprobar si quedan cartas en el mazo
+            
+            mano_casa.append(mazo.pop(random.randint(0, len(mazo) - 1)))  # Retorna una carta a la baraja casa
+
+    return f"Las cartas principales de la casa son:{mano_casa},\n Tus cartas principales son: {mano_jugador}"
+
+
 # Calcular el valor de una mano
 def valor_mano(mano):
 	#  Sumar los valores de cada carta, haciendo uso de recursividad para sumar sus elementos y si es k
@@ -39,4 +56,4 @@ def jugar(mazo_dealer, jugador1, jugador2):
         return jugar(mazo_restante, jugador1, jugador2 + [carta])
 
 # Iniciar el juego
-print(jugar(random.sample(generar_mazo(), k=52), [], []))
+print(repartir_cartas(generar_mazo(),[],[]))
