@@ -1,9 +1,14 @@
-## instrucciones de uso
+Workshop by:
 
-__Para instalar dependencias:__
+Juan Diego Lozada 20222020014
+Cesar Pulido 20222020048
+
+## Instructions for use
+
+__Requirements:__
 
 pip install fastapi uvicorn pyswip
 
-__Para ejecutar el ejemplo:__
+__To run the example:__
 
 uvicorn main:app --reload
